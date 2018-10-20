@@ -4,10 +4,14 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "express": "^4.16.3",
-    "body-parser": "^1.18.3"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
   },
   "scripts": {
+    "dev": "PORT=3002 TOKEN=secretToken nodemon server.js",
     "start": "node server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
