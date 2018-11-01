@@ -24,7 +24,7 @@ app.put('/:namespace/save', json(), (req, res) => {
 
 app.post('/:namespace/reset', (req, res) => {
   save(req.params.namespace, {
-    entries: []
+    offers: []
   })
   res.json(load(req.params.namespace))
 })

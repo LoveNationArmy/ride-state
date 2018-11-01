@@ -1,6 +1,6 @@
-const { 
-  readFileSync: read, 
-  writeFileSync: write 
+const {
+  readFileSync: read,
+  writeFileSync: write
 } = require('fs')
 
 exports.load = (ns) => JSON.parse(read(`.data/${ns}.json`, 'utf8'))
