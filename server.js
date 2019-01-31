@@ -13,19 +13,12 @@ app.use((req, res, next) => {
   }
 })
 
-app.get('/:namespace/load', (req, res) => {
+app.get('/:namespace', (req, res) => {
   res.json(load(req.params.namespace))
 })
 
-app.put('/:namespace/save', json(), (req, res) => {
+app.post('/:namespace', json(), (req, res) => {
   save(req.params.namespace, req.body)
-  res.json(load(req.params.namespace))
-})
-
-app.post('/:namespace/reset', (req, res) => {
-  save(req.params.namespace, {
-    entries: []
-  })
   res.json(load(req.params.namespace))
 })
 
